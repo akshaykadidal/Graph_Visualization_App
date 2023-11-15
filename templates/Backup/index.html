@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NetworkX App</title>
+</head>
+<body>
+    <h1>Select a Node</h1>
+    <form method="post">
+        <select name="selected_node">
+            {% for node in nodes %}
+                <option value="{{ node }}">{{ node }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

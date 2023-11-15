@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px; /* Adjust width as needed */
+    outline: none;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+    border-color: #aaa;
+}
+
+button[type="submit"] {
+    border: none;
+    background: #0066A4;
+    color: white;
+    padding: 10px 20px;
+    margin-left: -50px; /* Adjust accordingly to the design */
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background: #007BFF;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Additional styling for results if necessary */
+.results-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.no-results {
+    text-align: center;
+    margin-top: 20px;
+}

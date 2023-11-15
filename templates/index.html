@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NetworkX App</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #process-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            appearance: none;
+            background-color: #fff;
+            background-image: linear-gradient(45deg, transparent 50%, #aaa 50%),
+                              linear-gradient(135deg, #aaa 50%, transparent 50%);
+            background-position: calc(100% - 20px) calc(1em + 2px),
+                              calc(100% - 15px) calc(1em + 2px);
+            background-size: 5px 5px, 5px 5px;
+            background-repeat: no-repeat;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #0066A4;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 20%;
+            padding: 10px;
+            background-color: #0066A4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #007BFF;
+        }
+    </style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Select a PI Element</h1>
+    <form method="post">
+        <select name="selected_node">
+            {% for node in nodes %}
+                <option value="{{ node }}">{{ node }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

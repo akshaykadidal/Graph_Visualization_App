@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Graph</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <h1>Complete Graph with {{ nodes }} nodes</h1>
+    <div id="mynetwork"></div>
+    <script>
+        var container = document.getElementById('mynetwork');
+        var data = new vis.DataSet();
+        var options = {};
+        var network = new vis.Network(container, data, options);
+
+        fetch('/graph/{{ nodes }}')
+            .then(response => response.text())
+            .then(html => {
+                container.innerHTML = html;
+            });
+    </script>
+</body>
+</html>
